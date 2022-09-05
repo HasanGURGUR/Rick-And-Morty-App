@@ -1,4 +1,4 @@
-package hasan.gurgur.rickandmorty.view
+package hasan.gurgur.rickandmorty.view.character
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

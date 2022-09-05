@@ -1,23 +1,23 @@
-package hasan.gurgur.rickandmorty.view
+package hasan.gurgur.rickandmorty.view.episode
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import hasan.gurgur.rickandmorty.BaseListAdapter
-import hasan.gurgur.rickandmorty.model.Result
+import hasan.gurgur.rickandmorty.model.episode.EpisodeModel
 
-class CharacterListAdapter (
-    private val characterClickCallback: ((Result?) -> Unit)?
-) : BaseListAdapter<Result>(
+class EpisodeListAdapter (
+    private val characterClickCallback: ((EpisodeModel?) -> Unit)?
+) : BaseListAdapter<EpisodeModel>(
     itemsSame = { old, new -> old.id == new.id },
     contentsSame = { old, new -> old == new }
 ) {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is CharacterItemHolder -> {
+            is EpisodeItemHolder -> {
                 holder.bind(
-                    character = getItem(position),
+                    episode = getItem(position),
                     characterClickCallback = characterClickCallback
                 )
             }
@@ -29,7 +29,7 @@ class CharacterListAdapter (
         inflater: LayoutInflater,
         viewType: Int
     ): RecyclerView.ViewHolder {
-        return CharacterItemHolder(parent, inflater)
+        return EpisodeItemHolder(parent, inflater)
     }
 
 }

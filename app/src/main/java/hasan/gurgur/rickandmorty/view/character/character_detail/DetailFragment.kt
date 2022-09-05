@@ -1,4 +1,4 @@
-package hasan.gurgur.rickandmorty.view.detail
+package hasan.gurgur.rickandmorty.view.character.character_detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import hasan.gurgur.rickandmorty.R
-import hasan.gurgur.rickandmorty.databinding.FragmentCharactersBinding
 import hasan.gurgur.rickandmorty.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {

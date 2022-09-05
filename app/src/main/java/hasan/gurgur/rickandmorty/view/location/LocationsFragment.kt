@@ -1,6 +1,5 @@
-package hasan.gurgur.rickandmorty.view
+package hasan.gurgur.rickandmorty.view.location
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,22 +11,20 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import hasan.gurgur.rickandmorty.R
-import hasan.gurgur.rickandmorty.databinding.FragmentCharactersBinding
+import hasan.gurgur.rickandmorty.databinding.FragmentLocationsBinding
 import hasan.gurgur.rickandmorty.viewmodel.CharacterListViewModel
 
 
-class CharactersFragment : Fragment() {
+class LocationsFragment : Fragment() {
 
-
-    private var _binding: FragmentCharactersBinding? = null
+    private var _binding: FragmentLocationsBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var viewModel: CharacterListViewModel
-    lateinit var characterListAdapter: CharacterListAdapter
+    lateinit var locationListAdapter: LocationListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
     }
 
@@ -35,17 +32,15 @@ class CharactersFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = FragmentCharactersBinding.inflate(inflater, container, false)
+        _binding = FragmentLocationsBinding.inflate(inflater, container, false)
         initAdapter()
 
         viewModel = ViewModelProvider(requireActivity()).get(CharacterListViewModel::class.java)
-        viewModel.fetchDataFromRemoteApi()
+        viewModel.fetchLocationsDataFromRemoteApi()
 
-        viewModel.characters.observe(requireActivity()) {
-            characterListAdapter.submitList(it.results)
+        viewModel.locations.observe(requireActivity()) {
+            locationListAdapter.submitList(it.results)
         }
-
         return binding.root
     }
 
@@ -54,14 +49,14 @@ class CharactersFragment : Fragment() {
         _binding = null
     }
 
+
     private fun initAdapter() {
-        characterListAdapter = CharacterListAdapter {
-          findNavController().navigate(R.id.action_charactersFragment_to_detailFragment, bundleOf("model" to it))
+        locationListAdapter = LocationListAdapter {
+            findNavController().navigate(R.id.action_locationsFragment_to_locationDetailFragment, bundleOf("location_detail_model" to it))
         }
 
-        binding.characterRec.layoutManager =
+        binding.locationRec.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        binding.characterRec.adapter = characterListAdapter
+        binding.locationRec.adapter = locationListAdapter
     }
-
 }

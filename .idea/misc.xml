@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/fragment_characters.xml" value="0.3569230769230769" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/fragment_episodes.xml" value="0.3569230769230769" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/fragment_location_detail.xml" value="0.3569230769230769" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/fragment_locations.xml" value="0.3569230769230769" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/item_character_list_layout.xml" value="0.3569230769230769" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/item_episode_list_layout.xml" value="0.3569230769230769" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/item_location_detail_list_layout.xml" value="0.33" />
+        <entry key="..\:/Android Projeler/Rick and Morty/app/src/main/res/layout/item_location_list_layout.xml" value="0.3569230769230769" />
         <entry key="..\:/Users/Firat/AndroidProjeler/RickAndMorty/app/src/main/res/drawable/bottom_nav_colors.xml" value="0.3728205128205128" />
         <entry key="..\:/Users/Firat/AndroidProjeler/RickAndMorty/app/src/main/res/layout/activity_main.xml" value="0.3569230769230769" />
         <entry key="..\:/Users/Firat/AndroidProjeler/RickAndMorty/app/src/main/res/layout/fragment_characters.xml" value="0.3625" />

@@ -3,11 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.location.LocationsFragment">
+    android:orientation="vertical"
+    android:background="#80EDEDED"
+    tools:context=".view.location.location_detail.LocationDetailFragment">
+
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/location_rec"
+        android:id="@+id/location_detail_rec"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>
